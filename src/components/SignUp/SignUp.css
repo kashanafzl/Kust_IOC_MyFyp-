@@ -1,0 +1,19 @@
+
+
+.googlebtnandtext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+    font-size: 1rem;
+    background: rgb(214, 210, 210);
+    padding: 0.7rem;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.googlebtnandtext:hover{
+    background-color: #183995;
+    color: #fff;
+}
