@@ -118,7 +118,7 @@ const Navbar = () => {
             </Link>
 
             <li className="hover:text-gray-200">
-              <a href="#contact">Contact</a>
+              <a href="/contact">Contact</a>
             </li>
           </ul>
         </div>

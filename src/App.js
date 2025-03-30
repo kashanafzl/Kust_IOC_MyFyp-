@@ -19,6 +19,10 @@ import AdminViewForFYP from "./components/ADMIN/AdminViewForFyp";
 import Timetabel from "./components/TImeTabelManagement/Timetabel";
 import Forgotpassword from "./components/ForgotPassword/Forgotpassword";
 import Sport from "./components/Sports/Sport";
+import AdminViewtimetabel from "./components/ADMIN/AdminViewtimetabel";
+import Contact from "./components/Contact/Contact";
+import AdminFypMarks from "./components/ADMIN/AdminFypMarks";
+import AdminSport from "./components/ADMIN/AdminSport";
 
 // import './index.css'
 
@@ -33,6 +37,7 @@ export default function App() {
           <Route path="/signup" element={<Signup />} />
           {/* Faculty route */}
           <Route path="faculty" element={<Faculty />} />
+          <Route path="contact" element={<Contact />} />
           {/* Faculty route */}
 
           {/* faculty Members */}
@@ -58,6 +63,9 @@ export default function App() {
 
             {/* admin route */}
              <Route path="adminviewfyp" element={< AdminViewForFYP />} />
+             <Route path="adminviewtimetabel" element={< AdminViewtimetabel />} />
+             <Route path="admin_fyp_marks" element={< AdminFypMarks />} />
+             <Route path="admin_sport" element={< AdminSport />} />
        
        {/* admin route */}
 
