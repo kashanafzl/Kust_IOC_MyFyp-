@@ -9,9 +9,10 @@ footer {
     line-height: 2rem;
 }
 
-footer a {
+footer a , .footerp {
 	color: white;
 	text-decoration: none;
+	cursor: pointer;
 }
 
 footer > div:first-child {

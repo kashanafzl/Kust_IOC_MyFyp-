@@ -26,7 +26,7 @@ export default function Footer() {
 					<div className="soicalmediacirlce"></div>
 				</div>
 			</div>
-			<div className="">
+			<div className="footerp">
 				<div>
 					<h2>Quick Links</h2>
 
