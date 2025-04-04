@@ -7,6 +7,7 @@ import Feature from './AddFeatures/Feature';
 import { RiWhatsappFill } from "react-icons/ri";
 
 import chatbotimg from '../../assets/Img/chatbotimg.png'
+import Footer from './Footer/Footer';
 
 function Home() {
   const handleWhatsAppClick = () => {
@@ -28,6 +29,7 @@ function Home() {
       {/* <Card/> */}
       <Apply />
       <Feature />
+      <Footer/>
     </div>
   );
 }
