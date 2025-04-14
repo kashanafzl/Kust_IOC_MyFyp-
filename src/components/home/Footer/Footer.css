@@ -15,6 +15,13 @@ footer a , .footerp {
 	cursor: pointer;
 }
 
+
+.footericons{
+	display: flex;
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
 footer > div:first-child {
 	width: 40%;
 }

@@ -2,6 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from '../../../assets/Img/logo.svg'
 import "./Footer.css";
+
+import facebook from '../../../assets/Img/facebook.svg'
+import twitter from '../../../assets/Img/twitter.svg'
+import linkdln from '../../../assets/Img/linked.svg'
+import instagram from '../../../assets/Img/instragram.svg'
+
 export default function Footer() {
 	return (
 		<footer>
@@ -18,6 +24,12 @@ export default function Footer() {
 				<p>
                 We bring ideas to life with cutting-edge solutions tailored to your needs
 				</p>
+				<div className="footericons">
+					<img src={facebook} alt="" />
+					<img src={twitter} alt="" />
+					<img src={linkdln} alt="" />
+					<img src={instagram} alt="" />
+				</div>
 				<div className="socialmedialinks">
 					<div className="soicalmediacirlce"></div>
 					<div className="soicalmediacirlce"></div>

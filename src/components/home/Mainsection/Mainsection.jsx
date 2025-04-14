@@ -47,19 +47,33 @@
 //   );
 // }
 
-import React from 'react';
+import { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay'; // Import autoplay styles
 import { Navigation, Autoplay } from 'swiper/modules'; // Import Autoplay module
 import mainimg from '../../../assets/Img/back.jpg';
-import mainimg2 from '../../../assets/Img/p1.jpg';
-import mainimg3 from '../../../assets/Img/p2.jpg';
-import mainimg4 from '../../../assets/Img/p4.jpg';
-import mainimg5 from '../../../assets/Img/p5.jpg';
+import mainimg2 from '../../../assets/Img/k1.jpeg';
+import mainimg3 from '../../../assets/Img/k22.png';
+import mainimg4 from '../../../assets/Img/k33.png';
+import mainimg5 from '../../../assets/Img/k5.jpg';
+
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 
 export default function App() {
+
+
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
+  
+
   return (
     <div className="w-full">
       <Swiper
@@ -70,9 +84,9 @@ export default function App() {
       >
         <SwiperSlide>
           <div className="relative w-full h-[91vh]">
-            <img src={mainimg} alt="Slide 1" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center">
-              <h2 className="text-3xl text-[70px] font-bold">Welcome to IOC</h2>
+            <img src={mainimg2} alt="Slide 1" className="w-full h-full object-cover" />
+            <div  data-aos="fade-up" className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center">
+              <h2 data-aos="fade-up" className="text-3xl text-[70px] font-bold">Welcome to IOC</h2>
               <p className="text-lg pt-10 max-w-2xl">A place where innovation meets creativity. Step into a world of limitless possibilities and excellence.</p>
             </div>
           </div>
@@ -80,9 +94,9 @@ export default function App() {
 
         <SwiperSlide>
           <div className="relative w-full h-[91vh]">
-            <img src={mainimg2} alt="Slide 2" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center">
-              <h2 className="text-3xl text-[70px] font-bold">Innovate & Elevate</h2>
+            <img src={mainimg3} alt="Slide 2" className="w-full h-full object-cover" />
+            <div data-aos="fade-down" className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center">
+              <h2 data-aos="fade-down" className="text-3xl text-[70px] font-bold">Innovate & Elevate</h2>
               <p className="text-lg pt-10 max-w-2xl">Pushing the boundaries of technology and design to create a better tomorrow.</p>
             </div>
           </div>
@@ -90,7 +104,7 @@ export default function App() {
 
         <SwiperSlide>
           <div className="relative w-full h-[91vh]">
-            <img src={mainimg3} alt="Slide 3" className="w-full h-full object-cover" />
+            <img src={mainimg4} alt="Slide 3" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center">
               <h2 className="text-3xl text-[70px] font-bold">Your Vision, Our Mission</h2>
               <p className="text-lg pt-10 max-w-2xl">We bring ideas to life with cutting-edge solutions tailored to your needs.</p>
@@ -100,7 +114,7 @@ export default function App() {
 
         <SwiperSlide>
           <div className="relative w-full h-[91vh]">
-            <img src={mainimg4} alt="Slide 4" className="w-full h-full object-cover" />
+            <img src={mainimg5} alt="Slide 4" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center">
               <h2 className="text-3xl text-[70px] font-bold">Transforming the Future</h2>
               <p className="text-lg pt-10 max-w-2xl">Empowering businesses and individuals to reach new heights of success.</p>
@@ -110,7 +124,7 @@ export default function App() {
 
         <SwiperSlide>
           <div className="relative w-full h-[91vh]">
-            <img src={mainimg5} alt="Slide 5" className="w-full h-full object-cover" />
+            <img src={mainimg} alt="Slide 5" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center">
               <h2 className="text-3xl text-[70px] font-bold">Join the Revolution</h2>
               <p className="text-lg pt-10 max-w-2xl">Be a part of a movement that redefines innovation, creativity, and progress.</p>

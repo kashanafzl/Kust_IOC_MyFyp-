@@ -25,6 +25,8 @@ import AdminFypMarks from "./components/ADMIN/AdminFypMarks";
 import AdminSport from "./components/ADMIN/AdminSport";
 import About from "./components/About/About";
 import Adminaddevent from "./components/ADMIN/Adminaddevent";
+import Bs from "./components/Admissionbsms/Bs";
+import Ms from "./components/Admissionbsms/Ms";
 
 // import './index.css'
 
@@ -38,6 +40,8 @@ export default function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/about" element={<About />} />
+          <Route path="/bs" element={<Bs />} />
+          <Route path="/ms" element={<Ms />} />
           {/* Faculty route */}
           <Route path="faculty" element={<Faculty />} />
           <Route path="contact" element={<Contact />} />
@@ -47,6 +51,8 @@ export default function App() {
           <Route path="DrShafiullah" element={<DrShafiullah />} />
           <Route path="DrMuneerUmar" element={<DrMuneerUmar />} />
         {/* faculty Members */}
+
+
 
         {/* forgot__password page */}
         <Route path="forgot_password" element={<Forgotpassword />} />

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import swimmingimg from '../../assets/Img/swimming.jpg';
 import football from '../../assets/Img/football.jpg';
 import running from '../../assets/Img/running.jpg';
 import tugofwar from '../../assets/Img/war.jpg';
 import basketball from '../../assets/Img/basket.jpg';
+// import Navbar from '../home/Navbar/Navbar';
 
 export default function Sport() {
   const [selectedEvent, setSelectedEvent] = useState(null);
@@ -87,15 +89,26 @@ export default function Sport() {
   };
 
   return (
+    <>
+
+    {/* <Navbar/> */}
     <div className="min-h-screen font-poppins bg-gray-100 px-4 py-12 relative">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-3xl font-bold mb-8 text-center text-gray-800">Sports Events</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <h1 className="text-3xl font-bold mb-8 text-center text-[#880C24]">Sports Events</h1>
+        
+        <motion.div 
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
           {sportsEvents.map((event, index) => (
-            <div
+            <motion.div
               key={index}
               onClick={() => setSelectedEvent(event)}
-              className="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer hover:shadow-xl transition"
+              className="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer hover:shadow-xl"
+              whileHover={{ scale: 1.03 }}
+              transition={{ type: 'spring', stiffness: 300 }}
             >
               <img
                 src={event.image}
@@ -110,101 +123,90 @@ export default function Sport() {
                   <strong>Time:</strong> {event.time}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
-      {selectedEvent && (
-        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
-          <div className="bg-white rounded-xl shadow-lg max-w-2xl w-full p-8 relative overflow-y-auto max-h-[90vh]">
-            <button
-              onClick={handleClose}
-              className="absolute top-1 right-3 text-[30px] text-gray-500 hover:text-red-500"
+      <AnimatePresence>
+        {selectedEvent && (
+          <motion.div
+            className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.div
+              className="bg-white rounded-xl shadow-lg max-w-2xl w-full p-8 relative overflow-y-auto max-h-[90vh]"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3 }}
             >
-              &times;
-            </button>
-            <img
-              src={selectedEvent.image}
-              alt={selectedEvent.title}
-              className="w-full h-64 object-cover rounded-lg mb-4"
-            />
-            <h2 className="text-2xl font-bold text-gray-800 mb-2">{selectedEvent.title}</h2>
-            <p className="text-gray-600 mb-2">{selectedEvent.description}</p>
-            <div className="flex flex-wrap gap-4 text-sm text-gray-700 mb-6">
-              <p><strong>Date:</strong> {selectedEvent.date}</p>
-              <p><strong>Time:</strong> {selectedEvent.time}</p>
-              <p><strong>Location:</strong> {selectedEvent.location}</p>
-            </div>
-
-            {!showForm ? (
               <button
-                onClick={handleApplyClick}
-                className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-medium"
+                onClick={handleClose}
+                className="absolute top-1 right-3 text-[30px] text-gray-500 hover:text-red-500"
               >
-                Apply for Event
+                &times;
               </button>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-4 mt-6">
-                <h3 className="text-xl font-semibold text-gray-700 mb-2">Enter Your Details</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <input
-                    type="text"
-                    name="fullName"
-                    placeholder="Full Name"
-                    value={formData.fullName}
-                    onChange={handleChange}
-                    required
-                    className="border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                  />
-                  <input
-                    type="text"
-                    name="department"
-                    placeholder="Department"
-                    value={formData.department}
-                    onChange={handleChange}
-                    required
-                    className="border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                  />
-                  <input
-                    type="text"
-                    name="semester"
-                    placeholder="Semester"
-                    value={formData.semester}
-                    onChange={handleChange}
-                    required
-                    className="border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                  />
-                  <input
-                    type="text"
-                    name="registrationNumber"
-                    placeholder="Registration Number"
-                    value={formData.registrationNumber}
-                    onChange={handleChange}
-                    required
-                    className="border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                  />
-                  <input
-                    type="text"
-                    name="specialization"
-                    placeholder="Specialization"
-                    value={formData.specialization}
-                    onChange={handleChange}
-                    required
-                    className="border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-medium"
+              <img
+                src={selectedEvent.image}
+                alt={selectedEvent.title}
+                className="w-full h-64 object-cover rounded-lg mb-4"
+              />
+              <h2 className="text-2xl font-bold text-gray-800 mb-2">{selectedEvent.title}</h2>
+              <p className="text-gray-600 mb-2">{selectedEvent.description}</p>
+              <div className="flex flex-wrap gap-4 text-sm text-gray-700 mb-6">
+                <p><strong>Date:</strong> {selectedEvent.date}</p>
+                <p><strong>Time:</strong> {selectedEvent.time}</p>
+                <p><strong>Location:</strong> {selectedEvent.location}</p>
+              </div>
+
+              {!showForm ? (
+                <motion.button
+                  onClick={handleApplyClick}
+                  className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-medium"
+                  whileTap={{ scale: 0.95 }}
                 >
-                  Submit Application
-                </button>
-              </form>
-            )}
-          </div>
-        </div>
-      )}
+                  Apply for Event
+                </motion.button>
+              ) : (
+                <motion.form
+                  onSubmit={handleSubmit}
+                  className="space-y-4 mt-6"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  <h3 className="text-xl font-semibold text-gray-700 mb-2">Enter Your Details</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {['fullName', 'department', 'semester', 'registrationNumber', 'specialization'].map((field, i) => (
+                      <input
+                        key={i}
+                        type="text"
+                        name={field}
+                        placeholder={field.replace(/([A-Z])/g, ' $1')}
+                        value={formData[field]}
+                        onChange={handleChange}
+                        required
+                        className="border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                      />
+                    ))}
+                  </div>
+                  <button
+                    type="submit"
+                    className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-medium"
+                  >
+                    Submit Application
+                  </button>
+                </motion.form>
+              )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
+
+    </>
   );
 }

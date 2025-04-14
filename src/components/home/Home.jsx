@@ -8,6 +8,8 @@ import { RiWhatsappFill } from "react-icons/ri";
 
 import chatbotimg from '../../assets/Img/chatbotimg.png'
 import Footer from './Footer/Footer';
+import Studentprocess from './StudentFypprocess/Studentprocess';
+import Sport from '../Sports/Sport';
 
 function Home() {
   const handleWhatsAppClick = () => {
@@ -26,9 +28,11 @@ function Home() {
 
       <Navbar />
       <Mainsection />
+      <Studentprocess/>
       {/* <Card/> */}
       <Apply />
       <Feature />
+      <Sport/>
       <Footer/>
     </div>
   );

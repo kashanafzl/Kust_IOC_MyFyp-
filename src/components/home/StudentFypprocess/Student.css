@@ -1,0 +1,85 @@
+.student-container {
+    background: linear-gradient(to bottom right, #f0f4f8, #ffffff);
+    padding: 4rem 2rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .studentprocessdiv {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .studentprocessdiv h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #880C24;
+    margin-bottom: 1rem;
+  }
+  
+  .studentprocessdiv p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .studentfypandprocessflexdiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem 0;
+  }
+  
+  .fypprocessimg img {
+    width: 100%;
+    max-width: 420px;
+    transition: transform 0.3s ease;
+  }
+  
+  .fypprocessimg img:hover {
+    transform: scale(1.05);
+  }
+  
+  .process-steps {
+    max-width: 500px;
+  }
+  
+  .process-steps h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .icon {
+    color: #880C24;
+    font-size: 1.4rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .studentprocessdiv h1 {
+      font-size: 2rem;
+    }
+  
+    .studentfypandprocessflexdiv {
+      flex-direction: column;
+      padding-inline: 1rem;
+    }
+  
+    .process-steps {
+      text-align: center;
+    }
+  
+    .process-steps h3 {
+      justify-content: center;
+    }
+  }
+  

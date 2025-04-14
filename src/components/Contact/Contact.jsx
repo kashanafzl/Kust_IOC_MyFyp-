@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Navbar from '../home/Navbar/Navbar';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -47,6 +48,8 @@ export default function Contact() {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="min-h-screen bg-gradient-to-br from-indigo-100 to-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-lg">
         <h2 className="text-4xl font-bold text-center text-[#880C24] mb-10">
@@ -130,5 +133,6 @@ export default function Contact() {
       {/* Toast Container */}
       <ToastContainer />
     </div>
+    </>
   );
 }

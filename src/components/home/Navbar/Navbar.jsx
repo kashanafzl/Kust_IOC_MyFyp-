@@ -5,7 +5,7 @@ import {
   IoIosMenu,
   IoIosClose,
 } from "react-icons/io";
-import { Link, useNavigate } from "react-router-dom"; 
+import {  useNavigate } from "react-router-dom"; 
 
 // Logo import
 import logo from "../../../assets/Img/logo.svg";
@@ -36,6 +36,27 @@ const Navbar = () => {
   const handleLoginClick = () => {
     navigate("/login"); // Navigate to the Sign In page
   };
+  const gotheaboutpage = () => {
+    navigate("/about"); // Navigate to the about In page
+  };
+  const gothecontactpage = () => {
+    navigate("/contact"); // Navigate to the about In page
+  };
+  const gothesportpage = () => {
+    navigate("/sport"); // Navigate to the about In page
+  };
+  const gothefaculty = () => {
+    navigate("/faculty"); // Navigate to the about In page
+  };
+  const gothehomwpage = () => {
+    navigate("/"); // Navigate to the about In page
+  };
+  const gothebspage = () => {
+    navigate("/bs"); // Navigate to the about In page
+  };
+  const gothemspage = () => {
+    navigate("/ms"); // Navigate to the about In page
+  };
 
   return (
     <nav className="bg-[#880C24] z-40 relative font-montserrat text-white p-2 px-6 shadow-md">
@@ -45,12 +66,12 @@ const Navbar = () => {
           IOC
         </div>
         <div className="hidden md:flex">
-          <ul className="flex space-x-6 text-[16px]">
+          <ul className="flex space-x-10 text-[16px]">
             <li className="hover:text-gray-200">
-              <a href="#home">Home</a>
+              <p className="cursor-pointer" onClick={gothehomwpage}>Home</p>
             </li>
             <li className="hover:text-gray-200">
-              <a href="/about">About</a>
+              <p className="cursor-pointer" onClick={gotheaboutpage}>About</p>
             </li>
             <li
               className="relative hover:text-gray-200 cursor-pointer"
@@ -92,33 +113,33 @@ const Navbar = () => {
                 <div className="absolute left-0 mt-2 bg-white text-black p-2 rounded shadow-lg">
                   <ul>
                     <li className="p-1 hover:bg-gray-200">
-                      <a href="#apply">Apply Now</a>
+                      <p  onClick={gothebspage}>BS</p>
                     </li>
                     <li className="p-1 hover:bg-gray-200">
-                      <a href="#requirements">Requirements</a>
+                      <p onClick={gothemspage}>MS</p>
                     </li>
                     <li className="p-1 hover:bg-gray-200">
-                      <a href="#tuition">Tuition Fees</a>
+                      <a href="#tuition">PHD</a>
                     </li>
                   </ul>
                 </div>
               )}
             </li>
 
-              <Link to='/faculty'>
+            
             <li className="hover:text-gray-200">
-              <a href="/">Faculty</a>
+              <p className="cursor-pointer" onClick={gothefaculty}>Faculty</p>
             </li>
-            </Link>
+         
 
-              <Link to='/sport'>
+             
             <li className="hover:text-gray-200">
-              <a href="/sport">Sports</a>
+              <p className="cursor-pointer" onClick={gothesportpage}>Sports</p>
             </li>
-            </Link>
+          
 
             <li className="hover:text-gray-200">
-              <a href="/contact">Contact</a>
+              <p className="cursor-pointer" onClick={gothecontactpage}>Contact</p>
             </li>
           </ul>
         </div>

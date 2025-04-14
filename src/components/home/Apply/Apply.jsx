@@ -1,10 +1,23 @@
-import React from "react";
+import { useEffect } from 'react';
 import { Icon } from "@iconify/react";
 import { useNavigate } from "react-router-dom";
 import { IoTimerSharp } from "react-icons/io5";
 import { FaUserGraduate, FaBookReader } from "react-icons/fa";
 
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
+
 export default function Apply() {
+
+
+    useEffect(() => {
+      AOS.init({ duration: 2000 });
+    }, [])
+
+
   const navigate = useNavigate();
 
   const applyContent = [
@@ -41,14 +54,14 @@ export default function Apply() {
     <div className="max-w-7xl mx-auto px-6 py-16 font-montserrat">
 
 
-      <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div data-aos="zoom-in" className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {applyContent.map((content) => (
           <div
             key={content.id}
             onClick={() => handleCardClick(content.path)}
-            className="bg-white flex flex-col items-center border-l-4 border-[#880C24] shadow-md rounded-xl p-8 text-center cursor-pointer hover:bg-[#f5e3cb] hover:text-[#102C57] transition-transform duration-300 transform hover:scale-105 group"
+            className="bg-white flex flex-col items-center border-l-4 border-[#880C24] shadow-md rounded-xl p-8 text-center cursor-pointer hover:bg-[#880C24] hover:text-[#fff] transition-transform duration-300 transform hover:scale-105 group"
           >
-            <div className="text-4xl mb-4 text-[#102C57] group-hover:scale-110 transition duration-300">
+            <div className="text-4xl mb-4 text-[#7577d8] group-hover:scale-110 transition duration-300">
               {typeof content.icon === "string" ? (
                 <Icon icon={content.icon} />
               ) : (
@@ -58,7 +71,7 @@ export default function Apply() {
             <h2 className="text-xl md:text-2xl font-semibold mb-2">
               {content.title}
             </h2>
-            <p className="text-gray-600 group-hover:text-[#102C57] text-sm md:text-base">
+            <p className="text-gray-600 group-hover:text-[#fff] text-sm md:text-base">
               {content.description}
             </p>
           </div>
