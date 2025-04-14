@@ -125,7 +125,7 @@ function ExamManagement() {
               required
             />
           </div>
-          <button type="submit" className="bg-indigo-600 text-white p-3 rounded-lg">
+          <button type="submit" className="bg-[#880C24] text-white p-3 rounded-lg">
             Add Exam
           </button>
         </form>
@@ -183,7 +183,7 @@ function ExamManagement() {
               required
             />
           </div>
-          <button type="submit" className="bg-indigo-600 text-white p-3 rounded-lg">
+          <button type="submit" className="bg-[#880C24] text-white p-3 rounded-lg">
             Add Seating Plan
           </button>
         </form>
@@ -232,7 +232,7 @@ function ExamManagement() {
               required
             />
           </div>
-          <button type="submit" className="bg-indigo-600 text-white p-3 rounded-lg">
+          <button type="submit" className="bg-[#880C24] text-white p-3 rounded-lg">
             Assign Invigilator
           </button>
         </form>

@@ -49,13 +49,13 @@ export default function AdminSport() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white py-10 px-4 sm:px-8 font-sans">
       <ToastContainer />
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-extrabold text-center text-blue-700 mb-10 tracking-tight">
+        <h1 className="text-4xl font-extrabold text-center text-[#880C24] mb-10 tracking-tight">
           Sports Event Applications
         </h1>
 
         <div className="overflow-x-auto bg-white rounded-2xl shadow-xl ring-1 ring-gray-200">
           <table className="min-w-full table-auto">
-            <thead className="bg-blue-600 text-white">
+            <thead className="bg-[#880C24] text-white">
               <tr>
                 <th className="py-4 px-6 text-left text-sm font-semibold">#</th>
                 <th className="py-4 px-6 text-left text-sm font-semibold">Full Name</th>
@@ -79,7 +79,7 @@ export default function AdminSport() {
                   <td className="py-4 px-6 text-sm">{app.semester}</td>
                   <td className="py-4 px-6 text-sm">{app.registrationNumber}</td>
                   <td className="py-4 px-6 text-sm">{app.specialization}</td>
-                  <td className="py-4 px-6 text-sm font-semibold text-blue-600">
+                  <td className="py-4 px-6 text-sm font-semibold text-[#880C24]">
                     {app.event}
                   </td>
                   <td className="py-4 px-6 text-sm flex gap-4">

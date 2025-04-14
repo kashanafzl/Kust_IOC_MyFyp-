@@ -158,7 +158,7 @@ function FypForm() {
             <div>
               <button
                 type="submit"
-                className="w-full bg-indigo-600 text-white py-3 rounded-md font-semibold shadow-md hover:bg-indigo-700 transition duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-300"
+                className="w-full bg-[#880C24] text-white py-3 rounded-md font-semibold shadow-md transition duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-300"
               >
                 Submit FYP Request
               </button>

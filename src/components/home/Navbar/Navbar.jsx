@@ -38,7 +38,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-lightgraycolor z-40 relative font-montserrat text-white p-2 px-6 shadow-md">
+    <nav className="bg-[#880C24] z-40 relative font-montserrat text-white p-2 px-6 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center gap-3 text-2xl font-bold">
           <img src={logo} alt="logo" />
@@ -50,7 +50,7 @@ const Navbar = () => {
               <a href="#home">Home</a>
             </li>
             <li className="hover:text-gray-200">
-              <a href="#about">About</a>
+              <a href="/about">About</a>
             </li>
             <li
               className="relative hover:text-gray-200 cursor-pointer"
@@ -136,7 +136,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="absolute top-16 left-0 w-full bg-lightgraycolor text-white p-4 shadow-md">
+          <div className="absolute top-16 left-0 w-full bg-[#880C24] text-white p-4 shadow-md">
             <ul className="flex flex-col space-y-4">
               <li className="hover:text-gray-200">
                 <a href="#home">Home</a>
@@ -202,10 +202,10 @@ const Navbar = () => {
             </ul>
             {/* Add Login and Sign Up buttons in the mobile menu */}
             <div className="flex flex-col space-y-2 mt-4">
-              <button onClick={handleLoginClick} className="text-white font-semibold py-2 px-4 bg-lightgraycolor hover:bg-gray-200 hover:text-black transition-transform transform hover:scale-105">
+              <button onClick={handleLoginClick} className="text-white font-semibold py-2 px-4 bg-[#880C24] hover:bg-gray-200 hover:text-black transition-transform transform hover:scale-105">
                 Login
               </button>
-              <button onClick={handleSignUpClick} className="text-white font-semibold py-2 px-4 bg-lightgraycolor hover:bg-gray-200 hover:text-black transition-transform transform hover:scale-105">
+              <button onClick={handleSignUpClick} className="text-white font-semibold py-2 px-4 bg-[#880C24] hover:bg-gray-200 hover:text-black transition-transform transform hover:scale-105">
                 Sign Up
               </button>
             </div>
@@ -213,10 +213,10 @@ const Navbar = () => {
         )}
 
         <div className="hidden md:flex">
-          <button onClick={handleLoginClick} className="mr-2 text-white font-semibold py-2 px-2 transition-transform transform hover:scale-105 hover:bg-lightgraycolor">
+          <button onClick={handleLoginClick} className="mr-2 text-white font-semibold py-2 px-2 transition-transform transform hover:scale-105 hover:bg-[#880C24]">
             Login
           </button>
-          <button onClick={handleSignUpClick} className="text-white font-semibold py-2 px-2 transition-transform transform hover:scale-105 hover:bg-lightgraycolor">
+          <button onClick={handleSignUpClick} className="text-white font-semibold py-2 px-2 transition-transform transform hover:scale-105 hover:bg-[#880C24]">
             Sign Up
           </button>
         </div>

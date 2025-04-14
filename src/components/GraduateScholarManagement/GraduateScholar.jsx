@@ -164,7 +164,7 @@ function GraduateScholar() {
           <div>
             <button
               type="submit"
-              className="w-full bg-indigo-600 text-white p-4 rounded-lg font-semibold shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-300"
+              className="w-full bg-[#880C24] text-white p-4 rounded-lg font-semibold shadow-md  focus:outline-none "
             >
               Submit Scholar Details
             </button>

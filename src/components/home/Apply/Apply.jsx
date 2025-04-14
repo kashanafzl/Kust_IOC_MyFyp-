@@ -46,7 +46,7 @@ export default function Apply() {
           <div
             key={content.id}
             onClick={() => handleCardClick(content.path)}
-            className="bg-white flex flex-col items-center border-l-4 border-lightgraycolor shadow-md rounded-xl p-8 text-center cursor-pointer hover:bg-[#f5e3cb] hover:text-[#102C57] transition-transform duration-300 transform hover:scale-105 group"
+            className="bg-white flex flex-col items-center border-l-4 border-[#880C24] shadow-md rounded-xl p-8 text-center cursor-pointer hover:bg-[#f5e3cb] hover:text-[#102C57] transition-transform duration-300 transform hover:scale-105 group"
           >
             <div className="text-4xl mb-4 text-[#102C57] group-hover:scale-110 transition duration-300">
               {typeof content.icon === "string" ? (

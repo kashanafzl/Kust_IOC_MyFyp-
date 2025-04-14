@@ -23,6 +23,8 @@ import AdminViewtimetabel from "./components/ADMIN/AdminViewtimetabel";
 import Contact from "./components/Contact/Contact";
 import AdminFypMarks from "./components/ADMIN/AdminFypMarks";
 import AdminSport from "./components/ADMIN/AdminSport";
+import About from "./components/About/About";
+import Adminaddevent from "./components/ADMIN/Adminaddevent";
 
 // import './index.css'
 
@@ -35,6 +37,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/about" element={<About />} />
           {/* Faculty route */}
           <Route path="faculty" element={<Faculty />} />
           <Route path="contact" element={<Contact />} />
@@ -53,6 +56,10 @@ export default function App() {
         <Route path="sport" element={<Sport />} />
          {/* forgot__password page */}
 
+
+         <Route path="admin_sport" element={< AdminSport />} />
+         <Route path="admin_event" element={< Adminaddevent />} />
+
           {/* Dashboard  */}
           <Route path="/dashboard" element={<Main />}>
             <Route path="profile" element={<Profile />} />
@@ -65,7 +72,7 @@ export default function App() {
              <Route path="adminviewfyp" element={< AdminViewForFYP />} />
              <Route path="adminviewtimetabel" element={< AdminViewtimetabel />} />
              <Route path="admin_fyp_marks" element={< AdminFypMarks />} />
-             <Route path="admin_sport" element={< AdminSport />} />
+       
        
        {/* admin route */}
 

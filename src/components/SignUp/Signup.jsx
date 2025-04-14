@@ -149,7 +149,7 @@ export default function Signup() {
 
           <button
             type="submit"
-            className="w-full py-3 bg-lightgraycolor text-white rounded-md hover:bg-blue-700 transition"
+            className="w-full py-3 bg-[#880C24] text-white rounded-md transition"
           >
             Submit
           </button>
@@ -168,7 +168,7 @@ export default function Signup() {
             I already have an account?{" "}
             <span 
               onClick={handleLoginClick} 
-              className="text-blue-600 hover:underline cursor-pointer"
+              className="text-[#880C24] hover:underline cursor-pointer"
             >
               Login
             </span>

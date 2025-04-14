@@ -4,9 +4,12 @@ import React from 'react'
 // Logo import
 import logo from "../../../assets/Img/logo.svg";
 
+
+import { IoMdNotificationsOutline } from "react-icons/io";
+
 function SimpleNavbar() {
   return (
-    <nav className="bg-lightgraycolor z-40 relative font-montserrat text-white p-2 px-6 shadow-md">
+    <nav className="bg-[#880C24] z-40 relative font-montserrat text-white p-2 px-6 shadow-md">
     <div className="container mx-auto flex justify-between items-center">
       <div className="flex items-center gap-3 text-2xl font-bold">
         <img src={logo} alt="logo" />
@@ -16,8 +19,8 @@ function SimpleNavbar() {
 
 
       <div>
-        <p>..</p>
-        <button>notification</button>
+    
+        <IoMdNotificationsOutline />
       </div>
   
 

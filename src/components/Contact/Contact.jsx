@@ -49,7 +49,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-100 to-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-lg">
-        <h2 className="text-4xl font-bold text-center text-indigo-600 mb-10">
+        <h2 className="text-4xl font-bold text-center text-[#880C24] mb-10">
           Contact Us
         </h2>
 
@@ -119,7 +119,7 @@ export default function Contact() {
           <div>
             <button
               type="submit"
-              className="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300"
+              className="w-full bg-[#880C24] text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300"
             >
               Send Message
             </button>

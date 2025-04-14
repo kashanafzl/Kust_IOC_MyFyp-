@@ -29,7 +29,7 @@ function Login() {
       style={{ backgroundImage: `url(${bg})` }} // Set background image
     >
       <div className="bg-white font-montserrat rounded-lg shadow-lg p-8 max-w-md w-full">
-        <h2 className="text-2xl text-lightgraycolor font-bold text-center mb-6">Login</h2>
+        <h2 className="text-2xl text-[#880C24] font-bold text-center mb-6">Login</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block text-sm font-medium mb-1">Email</label>
@@ -64,7 +64,7 @@ function Login() {
 
           <button
             type="submit"
-            className="w-full py-3 bg-lightgraycolor text-white rounded-md hover:bg-blue-700 transition"
+            className="w-full py-3 bg-[#880C24] text-white rounded-md transition"
           >
             Submit
           </button>
@@ -73,7 +73,7 @@ function Login() {
             Don't have an account?{' '}
             <span 
               onClick={handleSignupClick} 
-              className="text-blue-600 hover:underline cursor-pointer"
+              className="text-[#880C24] hover:underline cursor-pointer"
             >
               Sign up
             </span>

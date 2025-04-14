@@ -51,7 +51,7 @@ export default function Profile() {
         </div>
 
         <button
-          className="mt-6 py-3 px-8 rounded-full bg-indigo-600 text-white font-semibold shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-300 transition"
+          className="mt-6 py-3 px-8 rounded-full bg-[#880C24] text-white font-semibold shadow-md  transition"
           onClick={handleImageRemove}
         >
           Remove Photo
@@ -66,7 +66,7 @@ export default function Profile() {
       <div className="bg-white p-4 md:p-4 rounded-lg shadow-lg flex-grow">
         <div className="mb-6">
           <h2 className="text-3xl font-bold">Edit Profile</h2>
-          <p className="text-gray-500 border-b-2 border-blue-500 inline-block mt-2">User Info</p>
+          <p className="text-gray-500 border-b-2 border-[#880C24] inline-block mt-2">User Info</p>
         </div>
 
         <div className="space-y-6">
@@ -128,7 +128,7 @@ export default function Profile() {
 
               <div>
                 <Link to="/forgot_password">
-              <p className="text-indigo-600 font-montserrat pt-2 text-right cursor-pointer hover:underline">Forgot Password?</p>
+              <p className="text-[#880C24] font-montserrat pt-2 text-right cursor-pointer hover:underline">Forgot Password?</p>
               </Link>
             </div>
           </div>
@@ -157,7 +157,7 @@ export default function Profile() {
           </div>
 
           <div className="mt-8 flex justify-center">
-            <button className="py-3 px-8 rounded-full bg-indigo-600 text-white font-semibold shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-300 transition">
+            <button className="py-3 px-8 rounded-full bg-[#880C24] text-white font-semibold shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-300 transition">
               Update Info
             </button>
           </div>
